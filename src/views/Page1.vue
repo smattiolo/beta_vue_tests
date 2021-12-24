@@ -1,19 +1,19 @@
 <template>
   <div>
-    <HelloWorld msg="alpha beta gamma delta epsilon" />
     <Bar />
+    <Clock />
   </div>
 </template>
 
 <script>
-import HelloWorld from "../components/HelloWorld.vue";
 import Bar from "../components/Bar.vue";
+import Clock from "../components/Clock.vue";
 
 export default {
   name: "Page1",
   components: {
-    HelloWorld,
     Bar,
+    Clock,
   },
 };
 </script>
