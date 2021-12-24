@@ -1,12 +1,23 @@
 <template>
   <div id="app">
+    <Stripe />
     <div id="nav">
-      <router-link to="/">Page1</router-link> |
+      <router-link to="/">Page1</router-link> --
       <router-link to="/page2">Page2</router-link>
     </div>
     <router-view />
   </div>
 </template>
+
+<script>
+import Stripe from "./components/Stripe.vue";
+
+export default {
+  components: {
+    Stripe,
+  },
+};
+</script>
 
 <style>
 #app {
@@ -18,7 +29,7 @@
 }
 
 #nav {
-  padding: 30px;
+  padding: 10px;
 }
 
 #nav a {
