@@ -2,10 +2,11 @@
   <div id="app">
     <Stripe />
     <div id="nav">
-      <router-link to="/">Page1</router-link> --
+      <router-link to="/">Page1</router-link> |
       <router-link to="/page2">Page2</router-link>
     </div>
     <router-view />
+    <Stripe class="bottom" />
   </div>
 </template>
 
@@ -24,12 +25,12 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 
 #nav {
   padding: 10px;
+  text-align: center;
 }
 
 #nav a {
@@ -39,5 +40,12 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.bottom {
+  width: 99%;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
 </style>
