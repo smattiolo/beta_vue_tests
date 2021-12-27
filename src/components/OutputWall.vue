@@ -18,6 +18,7 @@ export default {
 
 <style scoped>
 .output-container {
+  display: inline-block;
   width: 1500px;
   position: relative;
   top: 50px;
