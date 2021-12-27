@@ -6,7 +6,7 @@
 export default {
   name: "RedLine",
   data() {
-    return { len: "8px" };
+    return { len: "8px", accumulator: 8 };
   },
   props: {
     time: {
@@ -14,10 +14,16 @@ export default {
     },
   },
   watch: {
-    time: function () {
-      const seconds = parseInt(this.time.slice(-2));
+    time: function (thisTime) {
+      const seconds = parseInt(thisTime.slice(-2));
 
-      const pixels = seconds * 5 + 8;
+      const pixels = seconds + this.accumulator;
+
+      if (seconds === 59) {
+        this.accumulator = 8;
+      } else {
+        this.accumulator = pixels;
+      }
 
       this.len = pixels + "px";
     },
