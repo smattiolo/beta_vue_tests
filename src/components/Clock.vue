@@ -1,6 +1,6 @@
 <template>
   <div class="clock-container">
-    <p class="clock-text">{{ alpha }}</p>
+    <p class="clock-text">{{ currentTime }}</p>
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
 
   data() {
     return {
-      alpha: this.time,
+      currentTime: this.time,
     };
   },
 
@@ -28,14 +28,14 @@ export default {
         const minutes = dateTime.getMinutes().toString();
         const seconds = dateTime.getSeconds().toString();
 
-        this.alpha =
+        this.currentTime =
           (hours.length === 1 ? "0" + hours : hours) +
           ":" +
           (minutes.length === 1 ? "0" + minutes : minutes) +
           ":" +
           (seconds.length === 1 ? "0" + seconds : seconds);
 
-        this.$emit("new-time", this.alpha);
+        this.$emit("new-time", this.currentTime);
       }, 1000);
     },
   },
