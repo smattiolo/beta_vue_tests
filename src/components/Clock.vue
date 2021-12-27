@@ -1,17 +1,25 @@
 <template>
   <div class="clock-container">
-    <p class="clock-text">{{ time }}</p>
+    <p class="clock-text">{{ alpha }}</p>
   </div>
 </template>
 
 <script>
 export default {
   name: "Clock",
+
+  props: {
+    time: {
+      type: String,
+    },
+  },
+
   data() {
     return {
-      time: "waiting...",
+      alpha: this.time,
     };
   },
+
   methods: {
     getCurrentTime() {
       setInterval(() => {
@@ -20,12 +28,14 @@ export default {
         const minutes = dateTime.getMinutes().toString();
         const seconds = dateTime.getSeconds().toString();
 
-        this.time =
+        this.alpha =
           (hours.length === 1 ? "0" + hours : hours) +
           ":" +
           (minutes.length === 1 ? "0" + minutes : minutes) +
           ":" +
           (seconds.length === 1 ? "0" + seconds : seconds);
+
+        this.$emit("new-time", this.alpha);
       }, 1000);
     },
   },
@@ -42,7 +52,7 @@ export default {
   height: 60px;
   border-radius: 40px;
   background-color: #000;
-  margin: 20px;
+  margin: -80px 20px 0 0;
 }
 
 .clock-text {
