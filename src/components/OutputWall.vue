@@ -29,5 +29,6 @@ export default {
   color: #000;
   font-family: "Qwitcher Grypen", cursive;
   font-size: 50px;
+  white-space: pre-line;
 }
 </style>
