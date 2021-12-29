@@ -1,10 +1,17 @@
 <template>
   <div>
-    <Bar />
-    <Clock :time="time" @new-time="updateTime" />
-    <RedLine :time="time" />
-    <InputWall @user-input="writeOutput" />
-    <OutputWall :text="outputText" />
+    <div>
+      <Bar />
+      <Clock :time="time" @new-time="updateTime" />
+      <RedLine :time="time" />
+    </div>
+    <div>
+      <InputWall @user-input="writeOutput" />
+      <OutputWall :text="outputText" />
+    </div>
+    <div>
+      <BasicInput />
+    </div>
   </div>
 </template>
 
@@ -14,6 +21,7 @@ import Clock from "../components/Clock/Clock.vue";
 import RedLine from "../components/Clock/RedLine.vue";
 import InputWall from "../components/TextWall/InputWall.vue";
 import OutputWall from "../components/TextWall/OutputWall.vue";
+import BasicInput from "../components/BasicInput.vue";
 
 export default {
   name: "Page1",
@@ -24,6 +32,7 @@ export default {
     RedLine,
     InputWall,
     OutputWall,
+    BasicInput,
   },
 
   data() {

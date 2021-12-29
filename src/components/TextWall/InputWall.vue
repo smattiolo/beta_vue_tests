@@ -29,9 +29,9 @@ export default {
 
 <style scoped>
 .input-box {
-  margin: 40px 0 0 20px;
+  margin: 40px 10px 40px 20px;
   width: 275px;
-  float: left;
+  display: inline-block;
 }
 
 .label {
@@ -46,6 +46,5 @@ export default {
   border: solid 2px #505050;
   border-radius: 10px;
   padding: 5px;
-  background-color: #a5a5a5;
 }
 </style>

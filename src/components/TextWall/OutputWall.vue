@@ -20,9 +20,8 @@ export default {
 .output-container {
   display: inline-block;
   width: 1500px;
-  position: relative;
-  top: 50px;
-  left: 30px;
+  vertical-align: top;
+  margin-left: 20px;
 }
 
 .output-text {
