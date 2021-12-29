@@ -10,10 +10,10 @@
 
 <script>
 import Bar from "../components/Bar.vue";
-import Clock from "../components/Clock.vue";
-import RedLine from "../components/RedLine.vue";
-import InputWall from "../components/InputWall.vue";
-import OutputWall from "../components/OutputWall.vue";
+import Clock from "../components/Clock/Clock.vue";
+import RedLine from "../components/Clock/RedLine.vue";
+import InputWall from "../components/TextWall/InputWall.vue";
+import OutputWall from "../components/TextWall/OutputWall.vue";
 
 export default {
   name: "Page1",
